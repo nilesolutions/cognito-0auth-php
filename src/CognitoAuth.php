@@ -60,7 +60,7 @@ class CognitoAuth{
     public static function GetTokensByCode ( String $code ){
 
         if (  empty ($code)  ){
-          throw new exception('0auth code is empty !');
+          throw new \exception('0auth code is empty !');
         }
 
 
@@ -99,7 +99,7 @@ class CognitoAuth{
  
         if ($error) {
             
-            throw new exception( "cURL Error: " . $error);
+            throw new \exception( "cURL Error: " . $error);
         }
         else
         {
@@ -111,7 +111,7 @@ class CognitoAuth{
             }
           
             if(array_key_exists("error", $response)) 
-              throw new exception ("cURL Error: Something went wrong! Please contact IT department. ERROR MSG : " . $response["error"]);
+              throw new \exception ("cURL Error: Something went wrong! Please contact IT department. ERROR MSG : " . $response["error"]);
 
             //echo "cURL Error: Something went wrong! Please contact IT department.";
         }
@@ -164,7 +164,7 @@ class CognitoAuth{
 
     public static function DecodeIdToken(){
       if ( self::$user == null  or !array_key_exists("id_token" , self::$user ))
-        throw new exception('can not decode IdToken it\'s null');
+        throw new \exception('can not decode IdToken it\'s null');
 
 
         
