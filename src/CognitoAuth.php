@@ -57,7 +57,7 @@ class CognitoAuth{
 
     }
 
-    public static function GetTokensByCode ( String $code ){
+    public static function GetTokensByCode ( \String $code ){
 
         if (  empty ($code)  ){
           throw new \exception('0auth code is empty !');
