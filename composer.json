@@ -3,20 +3,22 @@
     "description": ".",
     "keywords": ["coginto", "0auth", "0auth 2"],
     "license": "proprietary",
+     "type": "library",
+    "homepage": "https://github.com/nilesolutions",
+
     "authors": [
         {
             "name": "Ahmed Sami",
             "email": "ejasoft@gmail.com"
         }
     ],
-    "type": "project",
     "require": {
-		"php": ">=5.4"
+        "php": ">=5.4"
     },
-	"require-dev": {
-		"phpunit/phpunit": "5.2.*"
+    "require-dev": {
+        "phpunit/phpunit": "5.2.*"
     },
-	"autoload": {
+    "autoload": {
         "psr-4": {
             "Almajal\\Auth\\": "src/"
         }
